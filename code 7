@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> myArray = new ArrayList<>();
+        myArray.add(1);
+        myArray.add(2);
+        myArray.add(3);
+        myArray.add(4);
+        myArray.add(5);
+        myArray.add(6);
+        myArray.add(7);
+        myArray.add(8);
+        myArray.add(9);
+
+        int elementToInsert = 99;
+        int insertPosition = 3;
+
+        List<Integer> modifiedArray = insertElement(myArray, elementToInsert, insertPosition);
+
+        System.out.println("Original Array: " + myArray);
+        System.out.println("Modified Array: " + modifiedArray);
+    }
+
+    public static List<Integer> insertElement(List<Integer> arr, int element, int position) {
+        arr.add(position, element);
+        return arr;
+    }
+}
+
+
