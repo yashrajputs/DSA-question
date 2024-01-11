@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> myArray = new ArrayList<>();
+        myArray.add(1);
+        myArray.add(2);
+        myArray.add(3);
+        myArray.add(4);
+        myArray.add(5);
+        myArray.add(6);
+        myArray.add(7);
+        myArray.add(8);
+        myArray.add(9);
+        
+        int deletePosition = 3;
+        List<Integer> modifiedArray = deleteElement(myArray, deletePosition);
+        
+        System.out.println("Original Array: " + myArray);
+        System.out.println("Modified Array: " + modifiedArray);
+    }
+    
+    public static List<Integer> deleteElement(List<Integer> arr, int position) {
+        arr.remove(position);
+        return arr;
+    }
+}
+
+
